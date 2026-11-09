@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,188 +5,799 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Hotel Alves em Brasília de Minas - MG. Conheça nossa estrutura e consulte sua hospedagem pelo WhatsApp.">
   <meta name="theme-color" content="#171717">
-  <title>Hotel e Restaurante Alves | Brasília de Minas - MG</title>
+  <title>Hotel Alves | Brasília de Minas - MG</title>
+
   <style>
-    :root{--preto:#171717;--grafite:#252525;--dourado:#c5a15b;--dourado-claro:#e4cb91;--creme:#f7f5f0;--branco:#fff;--texto:#333;--cinza:#777}
+    :root{
+      --preto:#171717;
+      --grafite:#252525;
+      --dourado:#c5a15b;
+      --dourado-claro:#e4cb91;
+      --creme:#f7f5f0;
+      --branco:#fff;
+      --texto:#333;
+      --cinza:#777
+    }
+
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:Arial,Helvetica,sans-serif;color:var(--texto);background:var(--creme);line-height:1.6}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--texto);
+      background:var(--creme);
+      line-height:1.6
+    }
+
     a{color:inherit;text-decoration:none}
     img{display:block;max-width:100%}
     .container{width:min(1160px,92%);margin:auto}
-    header{background:var(--preto);position:sticky;top:0;z-index:20;box-shadow:0 3px 18px #0002}
-    .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:12px;min-width:170px}
-    .brand img{width:145px;height:67px;object-fit:contain;object-position:center}
-    nav{display:flex;align-items:center;gap:25px;color:#f8f8f8;font-size:13px;letter-spacing:.04em}
+
+    header{
+      background:var(--preto);
+      position:sticky;
+      top:0;
+      z-index:20;
+      box-shadow:0 3px 18px #0002
+    }
+
+    .nav{
+      min-height:82px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:170px
+    }
+
+    .brand img{
+      width:145px;
+      height:67px;
+      object-fit:contain;
+      object-position:center
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:25px;
+      color:#f8f8f8;
+      font-size:13px;
+      letter-spacing:.04em
+    }
+
     nav a:hover{color:var(--dourado-claro)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--dourado);color:#171717;padding:13px 21px;border-radius:3px;font-weight:700;font-size:13px;letter-spacing:.04em;transition:.2s;border:1px solid var(--dourado)}
-    .btn:hover{background:var(--dourado-claro);transform:translateY(-1px)}
-    .btn-outline{background:transparent;color:var(--branco);border-color:#d8bd82}
-    .hero{min-height:610px;display:grid;grid-template-columns:1fr 1.12fr;background:var(--preto);color:white}
-    .hero-copy{padding:76px max(4vw,calc((100vw - 1160px)/2));padding-right:38px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
-    .eyebrow{color:var(--dourado-claro);font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;margin-bottom:18px}
-    h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400}
-    h1{font-size:clamp(42px,5vw,66px);line-height:1.04;letter-spacing:.015em;margin-bottom:20px}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      background:var(--dourado);
+      color:#171717;
+      padding:13px 21px;
+      border-radius:3px;
+      font-weight:700;
+      font-size:13px;
+      letter-spacing:.04em;
+      transition:.2s;
+      border:1px solid var(--dourado)
+    }
+
+    .btn:hover{
+      background:var(--dourado-claro);
+      transform:translateY(-1px)
+    }
+
+    .btn-outline{
+      background:transparent;
+      color:var(--branco);
+      border-color:#d8bd82
+    }
+
+    .hero{
+      min-height:610px;
+      display:grid;
+      grid-template-columns:1fr 1.12fr;
+      background:var(--preto);
+      color:white
+    }
+
+    .hero-copy{
+      padding:76px max(4vw,calc((100vw - 1160px)/2));
+      padding-right:38px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:flex-start
+    }
+
+    .eyebrow{
+      color:var(--dourado-claro);
+      font-size:11px;
+      letter-spacing:.24em;
+      text-transform:uppercase;
+      font-weight:700;
+      margin-bottom:18px
+    }
+
+    h1,h2,h3{
+      font-family:Georgia,'Times New Roman',serif;
+      font-weight:400
+    }
+
+    h1{
+      font-size:clamp(42px,5vw,66px);
+      line-height:1.04;
+      letter-spacing:.015em;
+      margin-bottom:20px
+    }
+
     h1 span{color:var(--dourado-claro)}
-    .hero-copy p{color:#d7d7d7;max-width:470px;margin-bottom:28px;font-size:16px}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
-    .hero-photo{min-height:610px;position:relative;overflow:hidden}
-    .hero-photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 42%}
-    .hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#17171722,transparent 35%),linear-gradient(0deg,#0003,transparent 40%)}
+
+    .hero-copy p{
+      color:#d7d7d7;
+      max-width:470px;
+      margin-bottom:28px;
+      font-size:16px
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px
+    }
+
+    .hero-photo{
+      min-height:610px;
+      position:relative;
+      overflow:hidden
+    }
+
+    .hero-photo img{
+      width:100%;
+      height:100%;
+      position:absolute;
+      inset:0;
+      object-fit:cover;
+      object-position:center 42%
+    }
+
+    .hero-photo:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg,#17171722,transparent 35%),linear-gradient(0deg,#0003,transparent 40%)
+    }
+
     .section{padding:82px 0}
-    .section-head{text-align:center;max-width:700px;margin:0 auto 42px}
+
+    .section-head{
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 42px
+    }
+
     .section-head .eyebrow{color:#98743a}
-    h2{font-size:clamp(32px,4vw,45px);color:var(--preto);line-height:1.15;margin-bottom:14px}
+
+    h2{
+      font-size:clamp(32px,4vw,45px);
+      color:var(--preto);
+      line-height:1.15;
+      margin-bottom:14px
+    }
+
     .section-head p{color:var(--cinza)}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
-    .about-photo{height:420px;overflow:hidden;border-radius:4px}
-    .about-photo img{width:100%;height:100%;object-fit:cover}
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:54px;
+      align-items:center
+    }
+
+    .about-photo{
+      height:420px;
+      overflow:hidden;
+      border-radius:4px
+    }
+
+    .about-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover
+    }
+
     .about-copy h2{margin-bottom:20px}
     .about-copy p{color:#666;margin-bottom:16px}
-    .gold-line{width:72px;height:2px;background:var(--dourado);margin:22px 0}
-    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .feature{background:white;border:1px solid #ece8df;padding:28px 24px;text-align:center;border-radius:4px}
-    .feature .symbol{font-size:27px;color:#a98443;margin-bottom:12px}
-    .feature h3{font-size:23px;color:var(--preto);margin-bottom:8px}
-    .feature p{font-size:14px;color:var(--cinza)}
+
+    .gold-line{
+      width:72px;
+      height:2px;
+      background:var(--dourado);
+      margin:22px 0
+    }
+
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px
+    }
+
+    .feature{
+      background:white;
+      border:1px solid #ece8df;
+      padding:28px 24px;
+      text-align:center;
+      border-radius:4px
+    }
+
+    .feature .symbol{
+      font-size:27px;
+      color:#a98443;
+      margin-bottom:12px
+    }
+
+    .feature h3{
+      font-size:23px;
+      color:var(--preto);
+      margin-bottom:8px
+    }
+
+    .feature p{
+      font-size:14px;
+      color:var(--cinza)
+    }
+
     .rooms{background:#eeece6}
-    .room-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-    .room-card{background:white;border-radius:4px;overflow:hidden;border:1px solid #e8e3d9}
-    .room-placeholder{height:210px;background:linear-gradient(135deg,#292929,#555);display:flex;align-items:center;justify-content:center;color:#e5cf9d;font-family:Georgia,serif;font-size:22px;letter-spacing:.08em}
+
+    .room-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px
+    }
+
+    .room-card{
+      background:white;
+      border-radius:4px;
+      overflow:hidden;
+      border:1px solid #e8e3d9
+    }
+
+    .room-placeholder{
+      height:210px;
+      background:linear-gradient(135deg,#292929,#555);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#e5cf9d;
+      font-family:Georgia,serif;
+      font-size:22px;
+      letter-spacing:.08em
+    }
+
     .room-info{padding:24px}
-    .room-info h3{font-size:25px;color:var(--preto);margin-bottom:8px}
-    .room-info p{color:var(--cinza);font-size:14px;margin-bottom:17px}
-    .gallery-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}
-    .gallery-grid img{width:100%;height:330px;object-fit:cover;border-radius:4px}
-    .gallery-note{background:var(--preto);color:#ddd;padding:30px;display:flex;flex-direction:column;justify-content:center;border-radius:4px}
-    .gallery-note h3{font-size:27px;color:white;margin-bottom:12px}
-    .gallery-note p{font-size:14px;color:#c9c9c9}
-    .rating{background:var(--preto);color:white;text-align:center;padding:60px 20px}
-    .rating .stars{color:var(--dourado-claro);font-size:27px;letter-spacing:5px}
-    .rating strong{display:block;font-family:Georgia,serif;font-size:48px;font-weight:400;margin:5px 0}
+
+    .room-info h3{
+      font-size:25px;
+      color:var(--preto);
+      margin-bottom:8px
+    }
+
+    .room-info p{
+      color:var(--cinza);
+      font-size:14px;
+      margin-bottom:17px
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:1.4fr 1fr;
+      gap:18px
+    }
+
+    .gallery-grid img{
+      width:100%;
+      height:330px;
+      object-fit:cover;
+      border-radius:4px
+    }
+
+    .gallery-note{
+      background:var(--preto);
+      color:#ddd;
+      padding:30px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      border-radius:4px
+    }
+
+    .gallery-note h3{
+      font-size:27px;
+      color:white;
+      margin-bottom:12px
+    }
+
+    .gallery-note p{
+      font-size:14px;
+      color:#c9c9c9
+    }
+
+    .rating{
+      background:var(--preto);
+      color:white;
+      text-align:center;
+      padding:60px 20px
+    }
+
+    .rating .stars{
+      color:var(--dourado-claro);
+      font-size:27px;
+      letter-spacing:5px
+    }
+
+    .rating strong{
+      display:block;
+      font-family:Georgia,serif;
+      font-size:48px;
+      font-weight:400;
+      margin:5px 0
+    }
+
     .rating p{color:#d5d5d5}
+
     .booking{background:#eeece6}
-    .booking-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:42px;align-items:start}
+
+    .booking-grid{
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:42px;
+      align-items:start
+    }
+
     .booking-copy h2{margin-bottom:15px}
     .booking-copy p{color:var(--cinza);margin-bottom:20px}
-    form{background:white;padding:30px;border:1px solid #e8e3d9;border-radius:4px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    label{font-size:12px;font-weight:700;color:#555;display:block;margin-bottom:6px}
-    input,select,textarea{width:100%;padding:13px;border:1px solid #ddd;border-radius:3px;font:inherit;font-size:14px;background:#fff;color:#333}
+
+    form{
+      background:white;
+      padding:30px;
+      border:1px solid #e8e3d9;
+      border-radius:4px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px
+    }
+
+    label{
+      font-size:12px;
+      font-weight:700;
+      color:#555;
+      display:block;
+      margin-bottom:6px
+    }
+
+    input,select,textarea{
+      width:100%;
+      padding:13px;
+      border:1px solid #ddd;
+      border-radius:3px;
+      font:inherit;
+      font-size:14px;
+      background:#fff;
+      color:#333
+    }
+
     .full{grid-column:1/-1}
     form button{grid-column:1/-1;cursor:pointer;font:inherit}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
-    .contact-card{background:white;padding:28px;border:1px solid #ece8df;border-radius:4px}
-    .contact-card h3{font-size:24px;color:var(--preto);margin-bottom:12px}
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px
+    }
+
+    .contact-card{
+      background:white;
+      padding:28px;
+      border:1px solid #ece8df;
+      border-radius:4px
+    }
+
+    .contact-card h3{
+      font-size:24px;
+      color:var(--preto);
+      margin-bottom:12px
+    }
+
     .contact-card p{margin:8px 0;color:#666}
-    .map{width:100%;height:330px;border:0;border-radius:4px;margin-top:22px}
-    footer{background:var(--preto);color:#ddd;padding:32px 0;text-align:center}
-    footer img{width:150px;height:70px;object-fit:contain;margin:0 auto 14px}
+
+    .map{
+      width:100%;
+      height:330px;
+      border:0;
+      border-radius:4px;
+      margin-top:22px
+    }
+
+    footer{
+      background:var(--preto);
+      color:#ddd;
+      padding:32px 0;
+      text-align:center
+    }
+
+    footer img{
+      width:150px;
+      height:70px;
+      object-fit:contain;
+      margin:0 auto 14px
+    }
+
     footer p{font-size:12px;color:#aaa}
-    .whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:30;background:#218c52;color:white;border-radius:50px;padding:14px 18px;font-weight:700;font-size:13px;box-shadow:0 5px 18px #0003}
-    @media(max-width:850px){nav{gap:13px;font-size:11px}.nav>.btn{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:58px 6%}.hero-photo{min-height:390px}.about-grid,.booking-grid{grid-template-columns:1fr}.about-photo{height:330px}}
-    @media(max-width:600px){.nav{min-height:72px}.brand img{width:125px;height:60px}nav{display:none}.hero{min-height:0}.hero-copy{padding:52px 6%}.hero-photo{min-height:310px}.section{padding:60px 0}.feature-grid,.room-grid,.gallery-grid,.contact-grid{grid-template-columns:1fr}.gallery-grid img{height:260px}.room-placeholder{height:180px}form{grid-template-columns:1fr;padding:20px}.full{grid-column:auto}.whatsapp-float{right:12px;bottom:12px;padding:12px 15px}.about-photo{height:270px}}
+
+    .whatsapp-float{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      z-index:30;
+      background:#218c52;
+      color:white;
+      border-radius:50px;
+      padding:14px 18px;
+      font-weight:700;
+      font-size:13px;
+      box-shadow:0 5px 18px #0003
+    }
+
+    @media(max-width:850px){
+      nav{gap:13px;font-size:11px}
+      .nav>.btn{display:none}
+      .hero{grid-template-columns:1fr}
+      .hero-copy{padding:58px 6%}
+      .hero-photo{min-height:390px}
+      .about-grid,.booking-grid{grid-template-columns:1fr}
+      .about-photo{height:330px}
+    }
+
+    @media(max-width:600px){
+      .nav{min-height:72px}
+      .brand img{width:125px;height:60px}
+      nav{display:none}
+      .hero{min-height:0}
+      .hero-copy{padding:52px 6%}
+      .hero-photo{min-height:310px}
+      .section{padding:60px 0}
+      .feature-grid,.room-grid,.gallery-grid,.contact-grid{grid-template-columns:1fr}
+      .gallery-grid img{height:260px}
+      .room-placeholder{height:180px}
+      form{grid-template-columns:1fr;padding:20px}
+      .full{grid-column:auto}
+      .whatsapp-float{right:12px;bottom:12px;padding:12px 15px}
+      .about-photo{height:270px}
+    }
   </style>
 </head>
+
 <body>
+
 <header>
   <div class="container nav">
-    <a class="brand" href="#inicio" aria-label="Hotel e Restaurante Alves - início"><img src="assets/logo.png" alt="Logo Hotel Alves"></a>
+    <a class="brand" href="#inicio" aria-label="Hotel Alves - início">
+      <img src="assets/logo.png" alt="Logo Hotel Alves">
+    </a>
+
     <nav aria-label="Menu principal">
-      <a href="#sobre">O hotel</a><a href="#acomodacoes">Acomodações</a><a href="#estrutura">Estrutura</a><a href="#localizacao">Localização</a>
+      <a href="#sobre">O hotel</a>
+      <a href="#acomodacoes">Acomodações</a>
+      <a href="#estrutura">Estrutura</a>
+      <a href="#localizacao">Localização</a>
     </nav>
-    <a class="btn" href="https://wa.me/5538997237862?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20uma%20reserva." target="_blank" rel="noopener">Reservar pelo WhatsApp</a>
+
+    <a class="btn" href="https://wa.me/5538997237862?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20uma%20reserva." target="_blank" rel="noopener">
+      Reservar pelo WhatsApp
+    </a>
   </div>
 </header>
+
 <main>
+
   <section class="hero" id="inicio">
     <div class="hero-copy">
       <div class="eyebrow">Brasília de Minas · Minas Gerais</div>
-      <h1>Hotel e Restaurante <span>Alves</span></h1>
+      <h1>Hotel <span>Alves</span></h1>
       <p>Conforto, qualidade e hospitalidade para tornar sua estadia mais agradável. Conheça nossa estrutura e consulte sua hospedagem.</p>
-      <div class="hero-actions"><a class="btn" href="#reserva">Consultar disponibilidade</a><a class="btn btn-outline" href="#sobre">Conheça o hotel</a></div>
+
+      <div class="hero-actions">
+        <a class="btn" href="#reserva">Consultar disponibilidade</a>
+        <a class="btn btn-outline" href="#sobre">Conheça o hotel</a>
+      </div>
     </div>
-    <div class="hero-photo"><img src="assets/fachada-hotel-alves.png" alt="Fachada do Hotel Alves em Brasília de Minas"></div>
+
+    <div class="hero-photo">
+      <img src="assets/fachada-hotel-alves.png" alt="Fachada do Hotel Alves em Brasília de Minas">
+    </div>
   </section>
 
   <section class="section" id="sobre">
     <div class="container about-grid">
-      <div class="about-photo"><img src="assets/fachada-hotel-alves.png" alt="Entrada e fachada do Hotel Alves"></div>
-      <div class="about-copy"><div class="eyebrow">Seja bem-vindo</div><h2>Uma estadia com conforto e praticidade</h2><div class="gold-line"></div>
-        <p>O Hotel e Restaurante Alves está localizado em Brasília de Minas, em uma estrutura moderna e de fácil identificação.</p>
-        <p>Entre em contato para consultar acomodações, disponibilidade e informações sobre os serviços oferecidos.</p>
-        <a class="btn" href="https://wa.me/5538997237862?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Hotel%20Alves." target="_blank" rel="noopener">Fale com nossa equipe</a>
+
+      <div class="about-photo">
+        <img src="assets/fachada-hotel-alves.png" alt="Entrada e fachada do Hotel Alves">
       </div>
+
+      <div class="about-copy">
+        <div class="eyebrow">Seja bem-vindo</div>
+        <h2>Uma estadia com conforto e praticidade</h2>
+        <div class="gold-line"></div>
+
+        <p>O Hotel Alves está localizado em Brasília de Minas, em uma estrutura moderna e de fácil identificação.</p>
+
+        <p>Entre em contato para consultar acomodações, disponibilidade e informações sobre os serviços oferecidos.</p>
+
+        <a class="btn" href="https://wa.me/5538997237862?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Hotel%20Alves." target="_blank" rel="noopener">
+          Fale com nossa equipe
+        </a>
+      </div>
+
     </div>
   </section>
 
   <section class="section rooms" id="acomodacoes">
-    <div class="container"><div class="section-head"><div class="eyebrow">Hospedagem</div><h2>Nossas acomodações</h2><p>Consulte pelo WhatsApp os tipos de quartos disponíveis, valores e comodidades para sua estadia.</p></div>
+    <div class="container">
+
+      <div class="section-head">
+        <div class="eyebrow">Hospedagem</div>
+        <h2>Nossas acomodações</h2>
+        <p>Consulte pelo WhatsApp os tipos de quartos disponíveis, valores e comodidades para sua estadia.</p>
+      </div>
+
       <div class="room-grid">
-        <article class="room-card"><div class="room-placeholder">HOTEL ALVES</div><div class="room-info"><h3>Quartos e acomodações</h3><p>Consulte as opções disponíveis e escolha a acomodação ideal para sua viagem.</p><a class="btn" href="https://wa.me/5538997237862?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20os%20quartos%20dispon%C3%ADveis." target="_blank" rel="noopener">Consultar quartos</a></div></article>
-        <article class="room-card"><div class="room-placeholder">CONFORTO E PRATICIDADE</div><div class="room-info"><h3>Informações da hospedagem</h3><p>Fale com a equipe para saber sobre capacidade, camas, comodidades e disponibilidade.</p><a class="btn" href="https://wa.me/5538997237862?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20as%20acomoda%C3%A7%C3%B5es." target="_blank" rel="noopener">Solicitar informações</a></div></article>
+
+        <article class="room-card">
+          <div class="room-placeholder">HOTEL ALVES</div>
+          <div class="room-info">
+            <h3>Quartos e acomodações</h3>
+            <p>Consulte as opções disponíveis e escolha a acomodação ideal para sua viagem.</p>
+            <a class="btn" href="https://wa.me/5538997237862?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20os%20quartos%20dispon%C3%ADveis." target="_blank" rel="noopener">
+              Consultar quartos
+            </a>
+          </div>
+        </article>
+
+        <article class="room-card">
+          <div class="room-placeholder">CONFORTO E PRATICIDADE</div>
+          <div class="room-info">
+            <h3>Informações da hospedagem</h3>
+            <p>Fale com a equipe para saber sobre capacidade, camas, comodidades e disponibilidade.</p>
+            <a class="btn" href="https://wa.me/5538997237862?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20as%20acomoda%C3%A7%C3%B5es." target="_blank" rel="noopener">
+              Solicitar informações
+            </a>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 
+  <!-- ESTRUTURA E COMODIDADES -->
   <section class="section" id="estrutura">
-    <div class="container"><div class="section-head"><div class="eyebrow">Conheça nossa estrutura</div><h2>Hotel e restaurante em um só lugar</h2><p>Consulte nossa equipe para conhecer os serviços e facilidades disponíveis durante sua visita.</p></div>
+    <div class="container">
+
+      <div class="section-head">
+        <div class="eyebrow">Conheça nossa estrutura</div>
+        <h2>Conforto e comodidade para sua estadia</h2>
+        <p>O Hotel Alves oferece comodidades para proporcionar mais conforto, praticidade e tranquilidade durante sua hospedagem.</p>
+      </div>
+
       <div class="feature-grid">
-        <article class="feature"><div class="symbol">⌂</div><h3>Hospedagem</h3><p>Consulte opções de quartos e disponibilidade.</p></article>
-        <article class="feature"><div class="symbol">♨</div><h3>Restaurante</h3><p>Entre em contato para conhecer as opções e horários de atendimento.</p></article>
-        <article class="feature"><div class="symbol">▣</div><h3>Estacionamento</h3><p>Consulte as condições de utilização do estacionamento.</p></article>
+
+        <article class="feature">
+          <div class="symbol">☕</div>
+          <h3>Café da manhã</h3>
+          <p>Comece seu dia com mais sabor e comodidade.</p>
+        </article>
+
+        <article class="feature">
+          <div class="symbol">❄</div>
+          <h3>Ar-condicionado</h3>
+          <p>Mais conforto e climatização para seu descanso.</p>
+        </article>
+
+        <article class="feature">
+          <div class="symbol">▣</div>
+          <h3>Estacionamento</h3>
+          <p>Praticidade para quem viaja de carro.</p>
+        </article>
+
+        <article class="feature">
+          <div class="symbol">▣</div>
+          <h3>Televisão</h3>
+          <p>Entretenimento e comodidade no quarto.</p>
+        </article>
+
+        <article class="feature">
+          <div class="symbol">⌁</div>
+          <h3>Wi-Fi</h3>
+          <p>Conectividade para você durante sua estadia.</p>
+        </article>
+
+        <article class="feature">
+          <div class="symbol">❄</div>
+          <h3>Frigobar</h3>
+          <p>Mais praticidade e comodidade no quarto.</p>
+        </article>
+
       </div>
     </div>
   </section>
 
   <section class="section rooms" id="galeria">
-    <div class="container"><div class="section-head"><div class="eyebrow">Galeria</div><h2>Conheça o Hotel Alves</h2><p>Um primeiro olhar sobre nossa fachada e estrutura.</p></div>
-      <div class="gallery-grid"><img src="assets/fachada-hotel-alves.png" alt="Fachada do Hotel e Restaurante Alves"><div class="gallery-note"><h3>Estamos esperando por você</h3><p>Para ver fotos dos quartos, restaurante e demais ambientes, solicite imagens atualizadas diretamente pelo WhatsApp.</p><div class="gold-line"></div><a class="btn" href="https://wa.me/5538997237862?text=Ol%C3%A1!%20Voc%C3%AAs%20poderiam%20me%20enviar%20fotos%20das%20acomoda%C3%A7%C3%B5es%3F" target="_blank" rel="noopener">Solicitar fotos</a></div></div>
+    <div class="container">
+
+      <div class="section-head">
+        <div class="eyebrow">Galeria</div>
+        <h2>Conheça o Hotel Alves</h2>
+        <p>Um primeiro olhar sobre nossa fachada e estrutura.</p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <img src="assets/fachada-hotel-alves.png" alt="Fachada do Hotel Alves">
+
+        <div class="gallery-note">
+          <h3>Estamos esperando por você</h3>
+          <p>Para ver fotos dos quartos e demais ambientes, solicite imagens atualizadas diretamente pelo WhatsApp.</p>
+          <div class="gold-line"></div>
+
+          <a class="btn" href="https://wa.me/5538997237862?text=Ol%C3%A1!%20Voc%C3%AAs%20poderiam%20me%20enviar%20fotos%20das%20acomoda%C3%A7%C3%B5es%3F" target="_blank" rel="noopener">
+            Solicitar fotos
+          </a>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <section class="rating"><div class="stars" aria-label="5 estrelas">★★★★★</div><strong>4,8 / 5</strong><p>Avaliação informada no Google</p></section>
+  <section class="rating">
+    <div class="stars" aria-label="5 estrelas">★★★★★</div>
+    <strong>4,8 / 5</strong>
+    <p>Avaliação informada no Google</p>
+  </section>
 
   <section class="section booking" id="reserva">
     <div class="container booking-grid">
-      <div class="booking-copy"><div class="eyebrow">Faça sua consulta</div><h2>Planeje sua estadia</h2><p>Preencha os dados e envie sua solicitação pelo WhatsApp. Nossa equipe poderá confirmar disponibilidade e valores.</p><p><strong>Importante:</strong> o envio da solicitação não confirma automaticamente a reserva.</p></div>
+
+      <div class="booking-copy">
+        <div class="eyebrow">Faça sua consulta</div>
+        <h2>Planeje sua estadia</h2>
+
+        <p>Preencha os dados e envie sua solicitação pelo WhatsApp. Nossa equipe poderá confirmar disponibilidade e valores.</p>
+
+        <p><strong>Importante:</strong> o envio da solicitação não confirma automaticamente a reserva.</p>
+      </div>
+
       <form id="bookingForm">
-        <div class="full"><label for="nome">Nome completo</label><input id="nome" name="nome" type="text" placeholder="Seu nome" required></div>
-        <div><label for="entrada">Data de entrada</label><input id="entrada" name="entrada" type="date" required></div>
-        <div><label for="saida">Data de saída</label><input id="saida" name="saida" type="date" required></div>
-        <div><label for="hospedes">Quantidade de hóspedes</label><select id="hospedes" name="hospedes" required><option value="">Selecione</option><option>1 hóspede</option><option>2 hóspedes</option><option>3 hóspedes</option><option>4 hóspedes</option><option>5 ou mais hóspedes</option></select></div>
-        <div><label for="quarto">Preferência de acomodação</label><select id="quarto" name="quarto"><option>Quero consultar as opções</option><option>Quarto individual</option><option>Quarto para casal</option><option>Quarto para família</option></select></div>
-        <div class="full"><label for="mensagem">Observações (opcional)</label><textarea id="mensagem" name="mensagem" rows="3" placeholder="Escreva alguma informação adicional"></textarea></div>
-        <button class="btn" type="submit">Enviar pré-reserva pelo WhatsApp</button>
+
+        <div class="full">
+          <label for="nome">Nome completo</label>
+          <input id="nome" name="nome" type="text" placeholder="Seu nome" required>
+        </div>
+
+        <div>
+          <label for="entrada">Data de entrada</label>
+          <input id="entrada" name="entrada" type="date" required>
+        </div>
+
+        <div>
+          <label for="saida">Data de saída</label>
+          <input id="saida" name="saida" type="date" required>
+        </div>
+
+        <div>
+          <label for="hospedes">Quantidade de hóspedes</label>
+          <select id="hospedes" name="hospedes" required>
+            <option value="">Selecione</option>
+            <option>1 hóspede</option>
+            <option>2 hóspedes</option>
+            <option>3 hóspedes</option>
+            <option>4 hóspedes</option>
+            <option>5 ou mais hóspedes</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="quarto">Preferência de acomodação</label>
+          <select id="quarto" name="quarto">
+            <option>Quero consultar as opções</option>
+            <option>Quarto individual</option>
+            <option>Quarto para casal</option>
+            <option>Quarto para família</option>
+          </select>
+        </div>
+
+        <div class="full">
+          <label for="mensagem">Observações (opcional)</label>
+          <textarea id="mensagem" name="mensagem" rows="3" placeholder="Escreva alguma informação adicional"></textarea>
+        </div>
+
+        <button class="btn" type="submit">
+          Enviar pré-reserva pelo WhatsApp
+        </button>
+
       </form>
     </div>
   </section>
 
   <section class="section" id="localizacao">
-    <div class="container"><div class="section-head"><div class="eyebrow">Estamos aqui</div><h2>Localização e contato</h2><p>Será um prazer receber você em Brasília de Minas.</p></div>
+    <div class="container">
+
+      <div class="section-head">
+        <div class="eyebrow">Estamos aqui</div>
+        <h2>Localização e contato</h2>
+        <p>Será um prazer receber você em Brasília de Minas.</p>
+      </div>
+
       <div class="contact-grid">
-        <div class="contact-card"><h3>Hotel e Restaurante Alves</h3><p><strong>Endereço:</strong> Av. Minas Gerais, nº 202, bairro Dona Joaquina, Brasília de Minas – MG.</p><p><strong>WhatsApp:</strong> (38) 99723-7862</p><p><strong>Avaliação:</strong> 4,8 estrelas no Google (informação fornecida pelo estabelecimento).</p><a class="btn" href="https://wa.me/5538997237862" target="_blank" rel="noopener">Conversar pelo WhatsApp</a></div>
-        <div><iframe class="map" title="Mapa do Hotel e Restaurante Alves" loading="lazy" src="https://www.google.com/maps?q=Av.%20Minas%20Gerais%2C%20202%2C%20Dona%20Joaquina%2C%20Bras%C3%ADlia%20de%20Minas%20MG&output=embed" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+
+        <div class="contact-card">
+          <h3>Hotel Alves</h3>
+
+          <p><strong>Endereço:</strong> Av. Minas Gerais, nº 202, bairro Dona Joaquina, Brasília de Minas – MG.</p>
+
+          <p><strong>WhatsApp:</strong> (38) 99723-7862</p>
+
+          <p><strong>Avaliação:</strong> 4,8 estrelas no Google (informação fornecida pelo estabelecimento).</p>
+
+          <a class="btn" href="https://wa.me/5538997237862" target="_blank" rel="noopener">
+            Conversar pelo WhatsApp
+          </a>
+        </div>
+
+        <div>
+          <iframe
+            class="map"
+            title="Mapa do Hotel Alves"
+            loading="lazy"
+            src="https://www.google.com/maps?q=Av.%20Minas%20Gerais%2C%20202%2C%20Dona%20Joaquina%2C%20Bras%C3%ADlia%20de%20Minas%20MG&output=embed"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+
       </div>
     </div>
   </section>
+
 </main>
-<footer><div class="container"><img src="assets/logo.png" alt="Hotel e Restaurante Alves"><p>©️ <span id="year"></span> Hotel e Restaurante Alves · Brasília de Minas – MG</p><p>Conforto · Qualidade · Hospitalidade</p></div></footer>
-<a class="whatsapp-float" href="https://wa.me/5538997237862?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Hotel%20Alves." target="_blank" rel="noopener" aria-label="Fale com o Hotel Alves pelo WhatsApp">WhatsApp</a>
+
+<footer>
+  <div class="container">
+    <img src="assets/logo.png" alt="Hotel Alves">
+    <p>©️ <span id="year"></span> Hotel Alves · Brasília de Minas – MG</p>
+    <p>Conforto · Qualidade · Hospitalidade</p>
+  </div>
+</footer>
+
+<a
+  class="whatsapp-float"
+  href="https://wa.me/5538997237862?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Hotel%20Alves."
+  target="_blank"
+  rel="noopener"
+  aria-label="Fale com o Hotel Alves pelo WhatsApp">
+  WhatsApp
+</a>
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
   document.getElementById('bookingForm').addEventListener('submit', function(event){
+
     event.preventDefault();
+
     const nome = document.getElementById('nome').value.trim();
-    const entrada = document.getElementById('entrada').value;
-    const saida = document.getElementById('saida').value;
-    const hospedes = document.getElementById('hospedes').value;
-    const quarto = document.getElementById('quarto').value;
-    const mensagem = document.getElementById('mensagem').value.trim();
-    if (saida <= entrada) { alert('A data de saída deve ser posterior à data de entrada.'); return; }
-    const texto = `Olá! Gostaria de solicitar uma pré-reserva no Hotel e Restaurante Alves.%0A%0ANome: ${encodeURIComponent(nome)}%0AEntrada: ${encodeURIComponent(entrada)}%0ASaída: ${encodeURIComponent(saida)}%0AHóspedes: ${encodeURIComponent(hospedes)}%0AAcomodação: ${encodeURIComponent(quarto)}%0AObservações: ${encodeURIComponent(mensagem || 'Não informado')}`;
-    window.open(`https://wa.me/5538997237862?text=${texto}`, '_blank', 'noopener');
-  });
-</script>
-</body>
-</html>
